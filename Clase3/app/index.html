@@ -20,21 +20,52 @@
       <!-- Frame del objeto calculadora -->
       <div class="calc_box">
         
-        <!-- Frame calc -->
-        <div class="frame_calc">
-          <h1>Mocazin</h1>
-        </div>
+        <div class="lcd_container">
 
-        <div>
+          <!-- Etiqueta span para poder seleccionar el resultado tanto en CSS como JS -->
+          <span class="lcd_res" id="res">-12345657890.00</span>
 
         </div>
 
-        <div>
+        <div class="op_container">
+
+          <!-- Etiqueta span para poder seleccionar el resultado tanto en CSS como JS -->
+          <span class="op_res" id="op">12345 + 650 = 902020.00</span>
 
         </div>
 
-        <div>
-            
+        <div class="buttons_container">
+
+          <div class="btns_grid">
+
+            <!-- Primera fila del 7 al 9 & / -->
+            <button class="btn" id="btn_7">7</button>
+            <button class="btn" id="btn_8">8</button>
+            <button class="btn" id="btn_9">9</button>
+            <button class="btn" id="btn_div">/</button>
+
+            <!-- Segunda fila del 4 al 6 & * -->
+            <button class="btn" id="btn_4">4</button>
+            <button class="btn" id="btn_5">5</button>
+            <button class="btn" id="btn_6">6</button>
+            <button class="btn" id="btn_mult">X</button>
+
+            <!-- Tercera fila del 1 al 3 & - -->
+            <button class="btn" id="btn_1">1</button>
+            <button class="btn" id="btn_2">2</button>
+            <button class="btn" id="btn_3">3</button>
+            <button class="btn" id="btn_sub">-</button>
+
+            <!-- Cuarta fila del 0 al . & + -->
+            <button class="btn" id="btn_0">0</button>
+            <button class="btn" id="btn_dot">.</button>
+            <button class="btn" id="btn_equal">=</button>
+            <button class="btn" id="btn_add">+</button>
+
+
+          </div>
+
+
         </div>
 
       </div>
