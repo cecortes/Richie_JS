@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Para que el padding y el border no se sumen al width */
+}
+
+body {
+  background-color: #201e1eee;
+  display: grid;
+  width: 100vw; /* Viewport width es el ancho de todo el documento */
+  height: 100vh; /* Viewport height es el alto de todo el documento */
+  align-items: center;
+  margin: auto;
+}
+
+.main_frame {
+  display: grid;
+  background-color: chartreuse;
+  width: 120%;
+  height: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.calc_box {
+  background-color: aqua;
+}
+
+.frame_calc {
+  background-color: chocolate;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  display: grid;
+}
