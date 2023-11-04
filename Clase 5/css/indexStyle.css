@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+  --bg-color: rgb(82, 81, 81);
+  --bg-calc: rgb(210, 210, 210);
+  --bg-lcd: rgba(50, 255, 70, 0.555);
+  --bg-op: rgba(50, 255, 255, 0.555);
+  --bg-main: #201e1eee;
+  --bg-btn: rgba(241, 177, 39, 0.835);
+  --bg-keyboard: rgba(89, 86, 86, 0.646);
+  --font-lcd: "Orbitron", sans-serif;
+  --font-btn: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Para que el padding y el border no se sumen al width */
+}
+
+body {
+  background-color: var(--bg-main);
+  display: grid;
+  width: 100vw; /* Viewport width es el ancho de todo el documento */
+  height: 100vh; /* Viewport height es el alto de todo el documento */
+  align-items: center;
+  margin: auto;
+}
+
+.main_frame {
+  display: flex;
+  background-color: var(--bg-color);
+  width: 350px;
+  height: 800px;
+  border-radius: 10px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc_box {
+  display: grid;
+  width: 93%;
+  height: 98%;
+  background-color: var(--bg-calc);
+  border-radius: 5px;
+  /* Definimos las áreas del grid para acomodar los elementos de la calculadora (LCD, botones, etc) */
+  grid-template-areas:
+    "lcd lcd lcd lcd"
+    "op op op op"
+    "btns btns btns btns";
+  grid-gap: 5px;
+  padding: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 0.5fr 2fr;
+}
+
+.lcd_container {
+  grid-area: lcd;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  background-color: var(--bg-lcd);
+  border-radius: 5px;
+  padding: 5px;
+  font-family: var(--font-lcd);
+  font-size: 1.8rem;
+  padding-top: 1rem;
+}
+
+.lcd_res {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.op_container {
+  grid-area: op;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: var(--bg-op);
+  border-radius: 5px;
+  padding: 5px;
+  font-family: var(--font-lcd);
+  font-size: 1.5rem;
+}
+
+.op_res {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.buttons_container {
+  grid-area: btns;
+  background-color: var(--bg-keyboard);
+  border-radius: 5px;
+  font-family: var(--font-lcd);
+  font-size: 1.5rem;
+}
+
+.btns_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-areas:
+    "b7 b8 b9 bdiv"
+    "b4 b5 b6 bmul"
+    "b1 b2 b3 bsub"
+    "bdot b0 beq badd";
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-btn);
+  border-radius: 40%;
+  border: none;
+  padding: 10px;
+  transition: all 0.3s ease;
+  font-family: var(--font-btn);
+  font-weight: 400;
+  font-size: 2rem;
+  color: #000;
+}
+
+#btn_7 {
+  grid-area: b7;
+}
+
+#btn_8 {
+  grid-area: b8;
+}
+
+#btn_9 {
+  grid-area: b9;
+}
+
+#btn_div {
+  grid-area: bdiv;
+}
+
+#btn_4 {
+  grid-area: b4;
+}
+
+#btn_5 {
+  grid-area: b5;
+}
+
+#btn_6 {
+  grid-area: b6;
+}
+
+#btn_mul {
+  grid-area: bmul;
+}
+
+#btn_1 {
+  grid-area: b1;
+}
+
+#btn_2 {
+  grid-area: b2;
+}
+
+#btn_3 {
+  grid-area: b3;
+}
+
+#btn_sub {
+  grid-area: bsub;
+}
+
+#btn_0 {
+  grid-area: b0;
+}
+
+#btn_dot {
+  grid-area: bdot;
+}
+
+#btn_eq {
+  grid-area: beq;
+}
+
+#btn_add {
+  grid-area: badd;
+}
+
+.btn:hover {
+  background-color: rgb(255, 197, 7);
+  cursor: pointer;
+}
