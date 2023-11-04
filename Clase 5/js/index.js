@@ -25,19 +25,19 @@ var btnSiete = document.getElementById("btn_7");
 btnSumar.addEventListener("click", SumarFn);
 btnIgual.addEventListener("click", IgualFn);
 btnPunto.addEventListener("click", PuntoFn);
-btnZero.addEventListener("click", zeroFn);
-btnRestar.addEventListener("click", restarFn);
-btnTres.addEventListener("click", tresFn);
-btnDos.addEventListener("click", dosFn);
-btnUno.addEventListener("click", unoFn);
+btnZero.addEventListener("click", ZeroFn);
+btnRestar.addEventListener("click", RestarFn);
+btnTres.addEventListener("click", TresFn);
+btnDos.addEventListener("click", DosFn);
+btnUno.addEventListener("click", UnoFn);
 btnX.addEventListener("click", MultiplicarFn);
-btnSeis.addEventListener("click", seisFn);
-btnCinco.addEventListener("click", cincoFn);
-btnCuatro.addEventListener("click", cuatroFn);
-btnDiv.addEventListener("click", divFn);
-btnNueve.addEventListener("click", nueveFn);
-btnOcho.addEventListener("click", ochoFn);
-btnSiete.addEventListener("click", sieteFn);
+btnSeis.addEventListener("click", SeisFn);
+btnCinco.addEventListener("click", CincoFn);
+btnCuatro.addEventListener("click", CuatroFn);
+btnDiv.addEventListener("click", DivFn);
+btnNueve.addEventListener("click", NueveFn);
+btnOcho.addEventListener("click", OchoFn);
+btnSiete.addEventListener("click", SieteFn);
 
 // Declarar funciones
 function SepararNumeros(cadena) {
@@ -137,27 +137,27 @@ function PuntoFn() {
   displayOperaciones.textContent += ".";
 }
 
-function zeroFn() {
+function ZeroFn() {
   console.log("0"); // Debug
   displayOperaciones.textContent += "0";
 }
 
-function restarFn() {
+function RestarFn() {
   console.log("-"); // Debug
   displayOperaciones.textContent += "-";
 }
 
-function tresFn() {
+function TresFn() {
   console.log("3"); // Debug
   displayOperaciones.textContent += "3";
 }
 
-function dosFn() {
+function DosFn() {
   console.log("2"); // Debug
   displayOperaciones.textContent += "2";
 }
 
-function unoFn() {
+function UnoFn() {
   console.log("1"); // Debug
   displayOperaciones.textContent += "1";
 }
@@ -167,37 +167,37 @@ function MultiplicarFn() {
   displayOperaciones.textContent += "x";
 }
 
-function seisFn() {
+function SeisFn() {
   console.log("6"); // Debug
   displayOperaciones.textContent += "6";
 }
 
-function cincoFn() {
+function CincoFn() {
   console.log("5");
   displayOperaciones.textContent += "5";
 }
 
-function cuatroFn() {
+function CuatroFn() {
   console.log("4");
   displayOperaciones.textContent += "4";
 }
 
-function divFn() {
+function DivFn() {
   console.log("/");
   displayOperaciones.textContent += "/";
 }
 
-function nueveFn() {
+function NueveFn() {
   console.log("9");
   displayOperaciones.textContent += "9";
 }
 
-function ochoFn() {
+function OchoFn() {
   console.log("8");
   displayOperaciones.textContent += "8";
 }
 
-function sieteFn() {
+function SieteFn() {
   console.log("8");
   displayOperaciones.textContent += "7";
 }
