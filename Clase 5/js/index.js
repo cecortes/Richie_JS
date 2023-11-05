@@ -2,24 +2,24 @@
 "use strict";
 
 // Seleccionar elementos del DOM por su ID
-var btnSumar = document.getElementById("btn_add");
-var btnIgual = document.getElementById("btn_equal");
-var btnPunto = document.getElementById("btn_dot");
-var btnZero = document.getElementById("btn_0");
-var displayOperaciones = document.getElementById("op");
-var displayResultado = document.getElementById("res");
-var btnRestar = document.getElementById("btn_sub");
-var btnTres = document.getElementById("btn_3");
-var btnDos = document.getElementById("btn_2");
-var btnUno = document.getElementById("btn_1");
-var btnX = document.getElementById("btn_mult");
-var btnSeis = document.getElementById("btn_6");
-var btnCinco = document.getElementById("btn_5");
-var btnCuatro = document.getElementById("btn_4");
-var btnDiv = document.getElementById("btn_div");
-var btnNueve = document.getElementById("btn_9");
-var btnOcho = document.getElementById("btn_8");
-var btnSiete = document.getElementById("btn_7");
+let btnSumar = document.getElementById("btn_add");
+let btnIgual = document.getElementById("btn_equal");
+let btnPunto = document.getElementById("btn_dot");
+let btnZero = document.getElementById("btn_0");
+let displayOperaciones = document.getElementById("op");
+let displayResultado = document.getElementById("res");
+let btnRestar = document.getElementById("btn_sub");
+let btnTres = document.getElementById("btn_3");
+let btnDos = document.getElementById("btn_2");
+let btnUno = document.getElementById("btn_1");
+let btnX = document.getElementById("btn_mult");
+let btnSeis = document.getElementById("btn_6");
+let btnCinco = document.getElementById("btn_5");
+let btnCuatro = document.getElementById("btn_4");
+let btnDiv = document.getElementById("btn_div");
+let btnNueve = document.getElementById("btn_9");
+let btnOcho = document.getElementById("btn_8");
+let btnSiete = document.getElementById("btn_7");
 
 // Asignar eventos a los elementos del DOM
 btnSumar.addEventListener("click", SumarFn);
@@ -44,16 +44,18 @@ function SepararNumeros(cadena) {
   // Si el usuario presiono +
   if (cadena.includes("+")) {
     // Separar los números de la operación
-    var num1 = cadena.split("+");
+    let num1 = cadena.split("+");
     // Separar el signo de =
-    var num2 = num1[1].split("=");
+    let num2 = num1[1].split("=");
 
-    // Convertir los números a enteros
-    var cantidad1 = parseInt(num1[0]);
-    var cantidad2 = parseInt(num2[0]);
+    // Convertir los strings a numeros
+    let cantidad1 = Number(num1[0]);
+    let cantidad2 = Number(num2[0]);
 
     // Sumar los números
-    var resultado = cantidad1 + cantidad2;
+    let resultado = cantidad1 + cantidad2;
+    // Formato a solo 4 decimales
+    resultado = resultado.toFixed(6);
 
     // Mostrar el resultado en el display
     displayOperaciones.textContent = resultado;
@@ -61,16 +63,18 @@ function SepararNumeros(cadena) {
     displayOperaciones.textContent = "";
   } else if (cadena.includes("-")) {
     // Separar los números de la operación
-    var num1 = cadena.split("-");
+    let num1 = cadena.split("-");
     // Separar el signo de =
-    var num2 = num1[1].split("=");
+    let num2 = num1[1].split("=");
 
     // Convertir los números a enteros
-    var cantidad1 = parseInt(num1[0]);
-    var cantidad2 = parseInt(num2[0]);
+    let cantidad1 = Number(num1[0]);
+    let cantidad2 = Number(num2[0]);
 
     // Restar los números
-    var resultado = cantidad1 - cantidad2;
+    let resultado = cantidad1 - cantidad2;
+    // Formato a solo 4 decimales
+    resultado = resultado.toFixed(6);
 
     // Mostrar el resultado en el display
     displayOperaciones.textContent = resultado;
@@ -78,17 +82,19 @@ function SepararNumeros(cadena) {
     displayOperaciones.textContent = "";
   } else if (cadena.includes("x")) {
     // Separar los números de la operación
-    var num1 = cadena.split("x");
+    let num1 = cadena.split("x");
 
     // Separar el signo de =
-    var num2 = num1[1].split("=");
+    let num2 = num1[1].split("=");
 
     // Convertir los números a enteros
-    var cantidad1 = parseInt(num1[0]);
-    var cantidad2 = parseInt(num2[0]);
+    let cantidad1 = Number(num1[0]);
+    let cantidad2 = Number(num2[0]);
 
     // Multiplicar los números
-    var resultado = cantidad1 * cantidad2;
+    let resultado = cantidad1 * cantidad2;
+    // Formato a solo 4 decimales
+    resultado = resultado.toFixed(6);
 
     // Mostrar el resultado en el display
     displayOperaciones.textContent = resultado;
@@ -96,17 +102,19 @@ function SepararNumeros(cadena) {
     displayOperaciones.textContent = "";
   } else if (cadena.includes("/")) {
     // Separar los números de la operación
-    var num1 = cadena.split("/");
+    let num1 = cadena.split("/");
 
     // Separar el signo de =
-    var num2 = num1[1].split("=");
+    let num2 = num1[1].split("=");
 
     // Convertir los números a enteros
-    var cantidad1 = parseInt(num1[0]);
-    var cantidad2 = parseInt(num2[0]);
+    let cantidad1 = Number(num1[0]);
+    let cantidad2 = Number(num2[0]);
 
     // Dividir los números
-    var resultado = cantidad1 / cantidad2;
+    let resultado = cantidad1 / cantidad2;
+    // Formato a solo 4 decimales
+    resultado = resultado.toFixed(6);
 
     // Mostrar el resultado en el display
     displayOperaciones.textContent = resultado;
@@ -126,7 +134,7 @@ function IgualFn() {
   displayOperaciones.textContent += "=";
 
   // Obtener el contenido del display
-  var operacion = displayOperaciones.textContent;
+  let operacion = displayOperaciones.textContent;
 
   // Llamar a la función que separa los números
   SepararNumeros(operacion);
