@@ -1,0 +1,89 @@
+/* BORDER Sizes */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #413c3c;
+  font-family: "Roboto", sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 4fr 1fr;
+  gap: 10px;
+  grid-template-areas:
+    "header header header header"
+    "aside main main main"
+    "footer footer footer footer";
+  background-color: #f2f2f2;
+  padding: 10px;
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
+
+#header {
+  grid-area: header;
+  background-color: #cd6060;
+  text-align: center;
+  padding: 10px;
+}
+
+#aside {
+  grid-area: aside;
+  background-color: #60cdc2;
+  text-align: center;
+  padding: 10px;
+}
+
+#main {
+  grid-area: main;
+  background-color: #f5d260;
+  text-align: center;
+  padding: 10px;
+}
+
+#footer {
+  grid-area: footer;
+  background-color: #d8a9df;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Media Queries para una pantalla de 500px */
+@media screen and (max-width: 500px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  #aside {
+    display: none;
+  }
+}
+
+/* Media Queries para una pantalla de 1024px */
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-areas:
+      "header header header header"
+      "aside aside main main"
+      "footer footer footer footer";
+  }
+
+  #aside {
+    display: block; /* Muestra el elemento por seguridad */
+  }
+}
