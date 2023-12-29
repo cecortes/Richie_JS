@@ -113,7 +113,7 @@ if (pastilla1 === "roja" && pastilla2 === "azul") {
 }
 
 /*
-Ficha1 = 11 Ficha1 = 11
+Ficha1 = 11 Ficha1 = 11 (Ficha1 == 11 && Ficha2 == 12 && Ficha3 == 13) || (Ficha1 == 11 && Ficha2 == 21 && Ficha3 == 31)
 Ficha2 = 12 Ficha2 = 21
 Ficha3 = 13 Ficha3 = 31
 
