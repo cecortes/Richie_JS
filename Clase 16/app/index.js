@@ -1,6 +1,6 @@
 "use strict";
 
-let Resultado = "";
+let resultado = "";
 
 let i = 0;
 
@@ -32,9 +32,17 @@ console.log(Resultado); // "12345"
 */
 
 do {
-  i = i + 1;
-  // Evaluar cuando i sea par
-  Resultado = Resultado + i;
+  i = i + 1; // i = 2, i = 3, i = 4, i = 5, i = 6, i = 7, i = 8, i = 9, i = 10
+
+  // Evaluar cuando i sea impar
+  if (i % 2 === 1) {
+    continue; // Salta a la siguiente iteración
+  }
+
+  resultado = resultado + i; // "246810"
 } while (i < 10);
 
-console.log(Resultado); // "12345678910"
+console.log(resultado); // "246810"
+
+// Hacer un bucle que imprima todas las letras del abecedario.
+// Hacer un bucle que imprima todas las letras del abecedario, pero que no imprima las vocales.
