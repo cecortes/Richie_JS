@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+  <!-- jQuery -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- JS -->
+  <script src="./js/index.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/indexStyles.css">
+</head>
+<body>
+
+  
+  <!-- Content -->
+  <div class="content">
+    
+    <!-- Title -->
+    <h1>Modal</h1>
+
+    <h2>dialog</h2>
+    <p>
+      El elemento HTML dialog representa una caja de diálogo u otro componente interactivo, como inspector o ventana.
+    </p>
+
+    <h2>Atributos</h2>
+    <p>
+      <h3>open</h3>
+      <p>
+        Indica que el diálogo está activo y disponible para interactuar. Cuando el atributo open no está asignado, no debe mostrarse al usuario.
+      </p>
+    </p>
+
+    <h2>Notas de Uso</h2>
+    <ul>
+      <li>
+        Los elementos <strong>form</strong> pueden integrarse dentro de un diálogo especificándolos con el atributo <strong>method="dialog"</strong>. Cuando se envía un formulario, el diálogo se cierra con un atributo <strong>returnValue</strong> asignado con el value del botón utilizado.
+      </li>
+      <li>
+        El pseudo-elemento <strong>::backdrop</strong> de CSS puede utilizarse para dar estilos al elemento <strong>dialog</strong>, por ejemplo para atenuar contenido inaccesible mientras el diálogo modal esté activo.
+      </li>
+    </ul>
+
+    <!-- Boton Mostar Modal -->
+    <button id="mostrar">Mostrar Modal</button>
+  </div>
+
+  <!-- Modal -->
+  <dialog id="modal" class="modal-main">
+    <h2>Esto es un Modal</h2>
+    <p>
+      El elemento dialog representa una caja de diálogo u otro componente interactivo, como inspector o ventana.
+    </p>
+    <p>
+      Pero en este caso, es un modal.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate in aut, delectus accusantium dolor, ratione qui, eaque soluta totam tempora eligendi numquam. Facere, assumenda omnis. Alias debitis laborum vitae harum.
+    </p>
+
+    <!-- Formulario -->
+    <form method="dialog">
+      <input type="text" placeholder="Nombre">
+      <input type="email" placeholder="Correo">
+      <input type="password" placeholder="Contraseña">
+      <button type="submit" value="submit" id="enviar">Enviar</button>
+    </form>
+
+  </dialog>
+  
+</body>
+</html>

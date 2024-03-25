@@ -1,0 +1,70 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.3rem;
+  color: blue;
+}
+
+#mostrar {
+  background-color: #4b64e4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: auto;
+  transition: all 1s;
+}
+
+#mostrar:hover {
+  background-color: #0f1965;
+}
+
+/* MODAL */
+.modal-main::backdrop {
+  background-image: url("../assets/pexels-alex-huahuisa-flores-20598967.jpg");
+  filter: blur(10px);
+  animation: fadeIn 1.5s ease both;
+}
+
+#modal {
+  max-width: 500px;
+  border-radius: 2%;
+  animation: fadeIn 1.5s ease both;
+}
+
+#modal p {
+  color: black;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
